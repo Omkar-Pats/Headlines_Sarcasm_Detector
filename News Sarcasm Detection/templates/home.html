@@ -1,0 +1,34 @@
+<html>
+<head>
+<link  type="text/css" rel="stylesheet" href="{{ url_for('static', filename='stylesheets/mystyle.css') }}" />
+<link  type="text/css" rel="stylesheet" href="{{ url_for('static', filename='stylesheets/new.css') }}" />
+</head>
+<body>
+<section class="py-5 text-white">
+  <div class="container py-4">
+    <div class="row">
+      <div class="col-lg-8 mx-auto text-center">
+        <h1 class="display-4">Sarcastic Headline detector</h1>
+       </div>
+    </div>
+</section>
+<div class="container" >
+        <form method="POST", action="{{url_for('home')}}">
+		<div class="mb-3">
+			<label class="form-label">Name</label>
+			<input type="text" class="form-control" name = ' a' placeholder="Your Name">
+		</div>
+		<div class="mb-3">
+			<label class="form-label">
+				Location
+			</label>
+			<input type="location" class="form-control" placeholder="Waxahachie">
+		</div>
+		<div class="mb-3">
+			<label class="form-label">Enter the Headline</label>
+			<textarea class="form-control"  rows="3" name='b'  placeholder="Type your Headline" required></textarea>
+		</div>
+			<center><input class="btn btn-primary btn-primary", type="submit" , value='Predict!' ></center>
+        </form>
+</div>
+</body>
